@@ -1,0 +1,21 @@
+# next
+.next/
+out/
+
+# dependencies
+node_modules/
+
+# env
+.env
+.env.local
+.env.production
+
+# os
+.DS_Store
+
+# ide
+.vscode/
+.idea/
+
+# debug
+npm-debug.log*
