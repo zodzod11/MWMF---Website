@@ -1,0 +1,55 @@
+# PPD Non-profit — Project Context
+
+## Purpose & interpretation
+
+This file is the standing project context for any AI agent helping Zack work on PPD Non-profit. Use it to preserve continuity and avoid repeatedly asking for decisions that have already been made.
+
+Status labels have specific meanings:
+
+- **[DECIDED]** — Current direction. Treat it as authoritative unless Zack explicitly changes it.
+- **[WORKING]** — The current default, but not necessarily final.
+- **[BRAINSTORM]** — An idea worth preserving. Do not present it as approved or final.
+- **[OPEN]** — A real unresolved question. Do not silently choose an answer.
+- **[HISTORICAL]** — Previously true or discussed, but replaced by a newer decision.
+
+If a newer direct instruction conflicts with this file, follow the newer instruction and recommend updating this file.
+
+---
+
+## 1. What This Space Is
+
+- **[WORKING]** This workspace is for everything related to PPD Non-profit — strategy, operations, funding, compliance, client relationships, and project management.
+- **[WORKING]** PPD Non-profit provides services including but not limited to: financial management, grant writing, compliance support, nonprofit consulting, and operational strategy.
+- **[OPEN]** The full scope of services, target clients, and operating model is being developed here.
+
+---
+
+## 2. Current Status
+
+- **[WORKING]** This space is being set up to capture and organize PPD Non-profit work.
+- **[OPEN]** Core services, pricing model, and target markets are being defined.
+- **[OPEN]** Funding strategy and revenue model are in development.
+
+---
+
+## 3. How to Use This Space
+
+### Folders
+
+| Folder | Purpose |
+|---|---|
+| `ideas/` | Raw thoughts, brain dumps, fragments, quick captures |
+| `plans/` | Refined concepts, structured plans, strategies |
+| `research/` | Grants, compliance, org research, competitive landscape |
+| `clients/` | Real or prospective client profiles |
+| `projects/` | When something becomes a real project with deliverables |
+
+### Modes
+
+| Mode | When to use |
+|---|---|
+| `_modes/brainstorm.md` | Open exploration, generating ideas |
+| `_modes/plan.md` | Organizing thoughts into actionable steps |
+| `_modes/build.md` | Creating documents, systems, or tools |
+| `_modes/deep-dive.md` | Going deep on one topic |
+| `_modes/critique.md` | Stress-testing ideas, finding weak points |
