@@ -28,9 +28,7 @@ export default async function ProgramDetailPage({
         </p>
         <div className="mt-6 bg-white p-8 rounded-lg border border-gray-200">
           <p className="text-lg text-charcoal-light leading-relaxed">
-            Detailed program content is being developed. [VERIFY: add full program
-            description, schedule, eligibility, and enrollment information when
-            confirmed.]
+            Detailed program content is being developed. Full program description, schedule, eligibility, and enrollment information coming soon.
           </p>
           <p className="text-sm text-gray-500 mt-4">
             <span className="font-medium">Audience:</span> {program.audience}

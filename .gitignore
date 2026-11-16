@@ -22,3 +22,7 @@ website/node_modules/
 # Debug logs
 npm-debug.log*
 pnpm-debug.log*
+
+# Build artifacts
+tsconfig.tsbuildinfo
+next-env.d.ts

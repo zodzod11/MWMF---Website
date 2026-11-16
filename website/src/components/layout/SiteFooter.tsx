@@ -3,6 +3,13 @@ import { FOOTER_SECTIONS, SITE_NAME } from "@/lib/content/site";
 export function SiteFooter() {
   return (
     <footer role="contentinfo" className="bg-green-950 text-white">
+      {/* Crisis notice */}
+      <div className="bg-green-900 border-b border-green-800 py-3 px-4 text-center">
+        <p className="text-sm text-green-200">
+          In crisis? Call or text <strong className="text-white">988</strong> (Suicide & Crisis Lifeline) or <strong className="text-white">911</strong> for immediate help.
+        </p>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {FOOTER_SECTIONS.map((section) => (

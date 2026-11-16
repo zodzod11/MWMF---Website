@@ -1,4 +1,10 @@
 import { ContentSection } from "@/components/sections/ContentSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resources",
+};
+
 import { RESOURCES_PAGE } from "@/lib/content/resources";
 import { EmptyState } from "@/components/ui/EmptyState";
 

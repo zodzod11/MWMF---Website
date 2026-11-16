@@ -45,7 +45,7 @@ export async function sendContactNotification(data: {
   message: string;
 }): Promise<void> {
   await sendEmail({
-    to: "contact@womenmaternalwellness.org", // [VERIFY] confirm contact email
+    to: "contact@womenmaternalwellness.org",
     subject: `[WMWF Contact] ${data.topic} — ${data.name}`,
     html: `
       <h2>New Contact Form Submission</h2>

@@ -1,4 +1,10 @@
 import { GET_INVOLVED_PAGE } from "@/lib/content/get-involved";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get Involved",
+};
+
 import { InterestForm } from "@/components/forms/InterestForm";
 
 export default function GetInvolvedPage() {

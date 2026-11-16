@@ -1,4 +1,10 @@
 import { CONTACT_PAGE } from "@/lib/content/contact";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+};
+
 import { ContactForm } from "@/components/forms/ContactForm";
 
 export default function ContactPage() {
@@ -12,9 +18,21 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Crisis notice */}
+      <section className="bg-terracotta-light py-4">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <p className="text-sm font-medium text-charcoal">
+            If you or someone you know is in crisis, call or text <strong>988</strong> (Suicide & Crisis Lifeline) or <strong>1-800-273-TALK</strong>. For immediate medical help, call <strong>911</strong>.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="font-heading text-2xl text-green-950 text-center">Send Us a Message</h2>
+          <p className="text-sm text-charcoal-light text-center mt-2">
+            This form is for non-urgent inquiries only. If this is an emergency, please call 988 or 911.
+          </p>
           <div className="mt-8">
             <ContactForm />
           </div>

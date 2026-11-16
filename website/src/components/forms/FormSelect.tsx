@@ -12,6 +12,7 @@ export function FormSelect({
   error?: string;
 }) {
   const id = `field-${name}`;
+  const hasError = !!error;
   return (
     <div className="mb-4">
       <label htmlFor={id} className="block text-sm font-medium text-charcoal mb-1">
@@ -22,6 +23,8 @@ export function FormSelect({
         id={id}
         name={name}
         required={required}
+        aria-invalid={hasError ? "true" : undefined}
+        aria-describedby={hasError ? `error-${name}` : undefined}
         className={`w-full px-3 py-2 rounded-lg border ${error ? "border-terracotta" : "border-gray-200"} bg-white text-charcoal`}
       >
         <option value="">Select...</option>
@@ -32,7 +35,7 @@ export function FormSelect({
         ))}
       </select>
       {error && (
-        <p className="text-sm text-terracotta mt-1" role="alert">{error}</p>
+        <p id={`error-${name}`} className="text-sm text-terracotta mt-1" role="alert">{error}</p>
       )}
     </div>
   );

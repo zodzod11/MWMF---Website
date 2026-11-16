@@ -1,4 +1,10 @@
 import { ContentSection } from "@/components/sections/ContentSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Events & Updates",
+};
+
 import { EVENTS_PAGE } from "@/lib/content/events";
 import { EmptyState } from "@/components/ui/EmptyState";
 

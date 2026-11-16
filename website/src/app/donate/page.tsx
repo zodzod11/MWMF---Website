@@ -1,4 +1,10 @@
 import { DONATE_PAGE } from "@/lib/content/donate";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Support Our Work",
+};
+
 
 export default function DonatePage() {
   return (
@@ -15,7 +21,7 @@ export default function DonatePage() {
           <div className="bg-cream p-8 rounded-lg border border-gray-200 text-center">
             <h2 className="font-heading text-2xl text-green-950">Donation Options Coming Soon</h2>
             <p className="text-lg text-charcoal-light mt-4 leading-relaxed">
-              We are setting up secure donation processing. Your support will help us provide culturally responsive programs, education, and navigation services to mothers and families in Greater Boston — at no cost to them.
+              We are setting up secure donation processing. Your support will help us provide culturally responsive programs, education, and navigation services to mothers and families in Greater Boston — intended to be provided at no cost to mothers and families.
             </p>
             <p className="text-lg text-charcoal-light mt-4">
               In the meantime, if you would like to support our work, please reach out.
@@ -25,7 +31,7 @@ export default function DonatePage() {
             </a>
           </div>
           <p className="text-sm text-gray-500 mt-6 text-center">
-            Tax-deductibility information will be provided once 501(c)(3) recognition is confirmed. [VERIFY]
+            Tax-deductibility information will be provided once 501(c)(3) recognition is confirmed.
           </p>
         </div>
       </section>
