@@ -13,9 +13,10 @@ export function SiteHeader() {
       >
         <a
           href="/"
-          className="font-heading text-xl font-medium text-green-950 no-underline"
+          className="font-heading text-lg lg:text-xl font-medium text-green-950 no-underline truncate"
         >
-          {SITE_NAME}
+          <span className="hidden sm:inline">{SITE_NAME}</span>
+          <span className="sm:hidden">WMWF</span>
         </a>
 
         {/* Desktop nav */}
@@ -43,8 +44,16 @@ export function SiteHeader() {
           </li>
         </ul>
 
-        {/* Mobile nav (client component) */}
-        <MobileNav />
+        {/* Mobile: Donate button + hamburger */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href={NAV_DONATE.href}
+            className="inline-flex items-center px-3 py-1.5 bg-terracotta text-white text-sm font-medium rounded-lg hover:bg-terracotta-light transition-colors no-underline"
+          >
+            {NAV_DONATE.label}
+          </a>
+          <MobileNav />
+        </div>
       </nav>
     </header>
   );

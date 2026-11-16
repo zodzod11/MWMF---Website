@@ -1,8 +1,11 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { NAV_LINKS, NAV_DONATE, SITE_NAME } from "@/lib/content/site";
 
 export function MobileNav() {
+  const pathname = usePathname();
+
   const toggle = () => {
     const menu = document.getElementById("mobile-menu-panel");
     const toggleBtn = document.getElementById("mobile-menu-toggle");
@@ -23,13 +26,18 @@ export function MobileNav() {
     }
   };
 
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
   return (
     <>
       <button
         id="mobile-menu-toggle"
         aria-label="Toggle navigation menu"
         aria-expanded="false"
-        className="lg:hidden flex items-center p-2"
+        className="flex items-center p-2"
         onClick={toggle}
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F2A25" strokeWidth="2">
@@ -44,7 +52,8 @@ export function MobileNav() {
         className="lg:hidden fixed inset-0 z-40 bg-white flex flex-col p-6 gap-4 translate-x-full transition-transform duration-300"
         onClick={close}
       >
-        <div className="flex justify-end">
+        <div className="flex items-center justify-between mb-4">
+          <span className="font-heading text-lg font-medium text-green-950">{SITE_NAME}</span>
           <button aria-label="Close menu" className="text-charcoal text-2xl p-1" onClick={close}>
             ✕
           </button>
@@ -53,17 +62,26 @@ export function MobileNav() {
           <a
             key={link.href}
             href={link.href}
-            className="block py-3 text-lg text-charcoal hover:text-green-950 no-underline"
+            className={`block py-3 text-lg no-underline rounded-lg px-3 transition-colors ${
+              isActive(link.href)
+                ? "bg-green-50 text-green-950 font-medium"
+                : "text-charcoal hover:text-green-950"
+            }`}
           >
             {link.label}
+            {isActive(link.href) && (
+              <span className="ml-2 text-green-600 text-sm">•</span>
+            )}
           </a>
         ))}
-        <a
-          href={NAV_DONATE.href}
-          className="block py-3 text-lg bg-terracotta text-white text-center rounded-lg no-underline"
-        >
-          {NAV_DONATE.label}
-        </a>
+        <div className="mt-4 border-t border-gray-100 pt-4">
+          <a
+            href={NAV_DONATE.href}
+            className="block py-3 text-lg bg-terracotta text-white text-center rounded-lg no-underline font-medium"
+          >
+            {NAV_DONATE.label}
+          </a>
+        </div>
       </div>
     </>
   );
