@@ -1,5 +1,3 @@
 {
-  "rootDirectory": "website",
-  "buildCommand": "cd website && pnpm build",
-  "outputDirectory": "website/.next"
+  "rootDirectory": "website"
 }
